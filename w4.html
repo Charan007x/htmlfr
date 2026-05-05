@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Analyzer</title>
+
+    <script>
+        function analyzeText() {
+
+            // Get text from textarea
+            var text = document.getElementById("inputText").value;
+
+            // Character count
+            var charCount = text.length;
+
+            // Word count
+            var words = text.trim().split(/\s+/);
+            var wordCount = (text == "") ? 0 : words.length;
+
+            // Line count
+            var lines = text.split("\n");
+            var lineCount = (text == "") ? 0 : lines.length;
+
+            // Display result
+            alert("Characters: " + charCount +
+                  "\nWords: " + wordCount +
+                  "\nLines: " + lineCount);
+        }
+    </script>
+</head>
+
+<body style="background-color: lightgreen; text-align:center;">
+
+    <!-- Heading -->
+    <h2>Text Analyzer</h2>
+
+    <!-- Textarea -->
+    <textarea id="inputText" rows="10" cols="40"></textarea>
+
+    <br><br>
+
+    <!-- Button -->
+    <button onclick="analyzeText()">Submit</button>
+
+</body>
+</html>

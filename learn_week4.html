@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Learning Week4</title>
+        <style>
+            body {
+                background-color: Yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <script>
+                function calculate() {
+                    var text=document.getElementById("intxt").value;
+                    var charcount=text.length;
+                    var wordcount=text.trim().split(/\s+/).length;
+                    var linecount=text.split("\n").length;
+                    alert("Characters: "+charcount+"\nWords: "+wordcount+"\nLines: "+linecount);
+                }
+            </script>
+
+            <textarea  id="intxt"></textarea>
+            <button onclick="calculate()">Calculate</button>
+        </center>
+    </body>
+</html>
