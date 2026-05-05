@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-controller="myCtrl">
+
+<h2>Calculator</h2>
+
+<!-- INPUT -->
+<input type="number" ng-model="num1" placeholder="Number 1">
+<input type="number" ng-model="num2" placeholder="Number 2">
+
+<!-- BUTTON -->
+<button ng-click="add()">Add</button>
+
+<!-- OUTPUT -->
+<h3>{{result}}</h3>
+
+<script>
+var app = angular.module("myApp", []);
+
+app.controller("myCtrl", function($scope) {
+
+    // INPUT → BUTTON → FUNCTION → OUTPUT
+    $scope.add = function() {
+        $scope.result = $scope.num1 + $scope.num2;
+    };
+
+});
+</script>
+
+</body>
+</html>
