@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>
+            Learning Week3
+        </title>
+        <style>
+            body {
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <select onchange="selectcity(this.value)">
+            <option>Select</option>
+            <option value="India">India</option>
+            <option value="China">China</option>
+        </select>
+        <p id="res" style="color:purple; font-size:20px;"></p>
+        <script>
+            function selectcity(val){
+                if(val=='India'){
+                    document.getElementById("res").innerHTML="New Delhi<br><img src='india.png' width='300'>";
+                }
+                else if(val=='China'){
+                    document.getElementById("res").innerHTML="Beijing<br><img src='china.png' width='300'>";
+                }
+            }
+        </script>
+    </body>
+</html>
